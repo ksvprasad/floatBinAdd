@@ -8,13 +8,13 @@ namespace floatBinAdd
         {
             BigInteger longSum;
             Console.WriteLine("Enter numbers");
-            double num1 = double.Parse(Console.ReadLine());
+            double num1 = double.Parse(Console.ReadLine()); //User inputs for decimal numbers...
             double num2 = double.Parse(Console.ReadLine());
-            int k=8;
+            int precision=8;                                
             Program p = new Program();
            // Console.WriteLine("The binary versions of {0} and {1} are:", num1, num2 );
-            string str1 = p.decimalToBinary(num1, k);
-            string str2 = p.decimalToBinary(num2, k);
+            string str1 = p.decimalToBinary(num1, precision);
+            string str2 = p.decimalToBinary(num2, precision);
           //  Console.WriteLine(str1);
           //  Console.WriteLine(str2);
             Console.WriteLine("The Binary Sum of {0} and {1} is:",num1, num2);
@@ -56,7 +56,7 @@ namespace floatBinAdd
             for (int i = size; i >= 0; i--)
             {                                           //Appending Floating Point
                 intFracBin = Sum[i] + intFracBin;       //Binary number with both integral and fractional parts
-                if (i == ((size) - (k - 1)))
+                if (i == ((size) - (precision - 1)))
                     intFracBin = '.' + intFracBin;
             }
             if ((num1 + num2) < 0)
@@ -70,7 +70,7 @@ namespace floatBinAdd
            // Console.WriteLine("The integer version of the sum of {0} and {1} is:",num1, num2);
             longSum = BigInteger.Parse(Sum);
            // Console.WriteLine(longSum);
-            double Decimal = p.binaryToDecimal(longSum,k);
+            double Decimal = p.binaryToDecimal(longSum,precision);
             Console.WriteLine("The decimal version of the sum of {0} and {1} is:",num1, num2);
             if((num1 + num2) < 0)
             {
