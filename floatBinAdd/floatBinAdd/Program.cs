@@ -10,7 +10,7 @@ namespace floatBinAdd
                     Console.WriteLine("Enter numbers");
                     double num1 = double.Parse(Console.ReadLine()); //User inputs for decimal numbers...
                     double num2 = double.Parse(Console.ReadLine());
-                    int precision=8;            //Precision is set to compute a fixed number of digits after decimal point.                          
+                    int precision=50;            //Precision is set to compute a fixed number of digits after decimal point. More the precision, more the accuracy.                          
                     Program p = new Program(); //A constructor to actually be able to access the methods within "Program" class
                     string binaryString1 = p.decimalToBinary(num1, precision);   //A method to convert the user's decimal input to binary representation.
                     string binaryString2 = p.decimalToBinary(num2, precision);   //The output obtained is then stored in two strings(one for each input).   
