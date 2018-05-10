@@ -134,8 +134,8 @@ namespace floatBinAdd
                                 else                                             //by replacing 1 with 0 and 0 with 1.
                                     compSecond = compSecond + '1';
                             }
-                    string compOne = "1";   //A string to add 1's complement by 1 to make it a 2's complement.
-                    compSecond = addition(compSecond, compOne); //Addition method is reused to add 1 to 1's complement. The obtained result is a 2's complement.
+                    string One = "1";   //A string to add 1's complement by 1 to make it a 2's complement.
+                    compSecond = addition(compSecond, One); //Addition method is reused to add 1 to 1's complement. The obtained result is a 2's complement.
                     result = addition(first, compSecond);       //Performing Exclusive-OR between 2's complement of a string and another string gives the difference
                     result = result.Remove(0, 1);//First Character is the Overflow Digit occured by 2's complement and hence should be removed...
                     return result;      //The subtracted result is returned.
