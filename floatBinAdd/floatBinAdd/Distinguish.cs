@@ -1,21 +1,19 @@
 using System;
 using System.Numerics;
-using binAddition;
-using binSubtraction;
+using binSum;
 namespace distinguish
     {
         class Distinguish
             {
                 public string findOut(string binString1, string binString2, double number1, double number2)
                     {
-                        Addition add = new Addition();
-                        Subtraction sub = new Subtraction();
+                        Sum s = new Sum();
                         String sumResult = "";
                         // A case for two positive numbers.
                         if ((number1 > 0) && (number2 > 0))       
                             {
                                 // An addition method to actually compute the sum.
-                                sumResult = add.addition(binString1, binString2);       
+                                sumResult = s.addition(binString1, binString2);       
                             }
                             // A case for one positive and one negative number.
                         else if ((number1 > 0) && (number2 < 0))  
@@ -24,12 +22,12 @@ namespace distinguish
                                 if (Math.Abs(number2) > number1)      
                                     {
                                         // A subtraction method to compute the difference.
-                                        sumResult = sub.subtraction(binString2, binString1);    
+                                        sumResult = s.subtraction(binString2, binString1);    
                                     } 
                                 else
                                     {
                                         // Binary strings are sent in an order. (bigger number, smaller number).
-                                        sumResult = sub.subtraction(binString1, binString2);    
+                                        sumResult = s.subtraction(binString1, binString2);    
                                     }
                             }
                             // Another case for one positive and one negative number.
@@ -37,16 +35,16 @@ namespace distinguish
                             {
                                 if (Math.Abs(number1) > number2)
                                     {
-                                        sumResult = sub.subtraction(binString1, binString2);
+                                        sumResult = s.subtraction(binString1, binString2);
                                     }
                                 else
                                     {
-                                        sumResult = sub.subtraction(binString2, binString1);
+                                        sumResult = s.subtraction(binString2, binString1);
                                     }
                             }
                         else
                             {
-                                sumResult = add.addition(binString1, binString2);
+                                sumResult = s.addition(binString1, binString2);
                             }
                         return sumResult;
                     }

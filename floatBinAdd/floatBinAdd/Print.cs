@@ -1,7 +1,7 @@
 using System;
 using System.Numerics;
 using floatBinAdd;
-using binToDec;
+using convert;
 namespace printer
     {
         class Print
@@ -36,7 +36,7 @@ namespace printer
                 // A method to print the decimal version of the sum.
                 public double integrate2(string Sum, double num1, double num2, int precision)
                     {
-                        ConvertDecimal cd = new ConvertDecimal();
+                        Conversion cd = new Conversion();
                         // Storing the binary string in the form of Big integer.
                         BigInteger longSum = BigInteger.Parse(Sum);    
                         // A method to convert binary string to decimal.
