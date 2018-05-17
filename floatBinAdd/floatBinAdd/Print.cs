@@ -9,7 +9,7 @@ namespace printer
                 // A method to print the binary version of the sum.
                 public string integrate1(string Sum, int precision, double num1, double num2)
                     {
-                        int size = Sum.Length -1;
+                        int size = Sum.Length - 1;
                     // A variable to store both the integral and fractional part of a binary number.
                     String intFracBin = "";                         
                     for (int i = size; i >= 0; i--)

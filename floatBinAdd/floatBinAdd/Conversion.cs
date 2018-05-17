@@ -68,5 +68,20 @@ namespace convert
                         binary = Integ + Frac;                     
                         return binary;
                     }
+                // A method to append the floating point before finding out the sum.    
+                public string append(string binaryNumber,int precision)
+                    {
+                        int size = binaryNumber.Length - 1;
+                        string result ="";
+                        for(int i = size; i >= 0; i--)
+                            {
+                                result = binaryNumber[i] + result;
+                                if(i == (size - (precision - 1)))
+                                    {
+                                        result = "." + result;
+                                    }
+                            }
+                        return result;
+                    }    
             }
     }
