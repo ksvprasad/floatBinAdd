@@ -1,9 +1,9 @@
 using System;
 using System.Numerics;
-using binSum;
-namespace distinguish
+using BinSum;
+namespace Distinguish
     {
-        class Distinguish
+        class Distinguisher
             {
                 public string findOut(string binString1, string binString2, double number1, double number2)
                     {

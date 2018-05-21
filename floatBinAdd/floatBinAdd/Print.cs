@@ -1,8 +1,8 @@
 using System;
 using System.Numerics;
-using floatBinAdd;
+using FloatBinAdd;
 using convert;
-namespace printer
+namespace Printer
     {
         class Print
             {

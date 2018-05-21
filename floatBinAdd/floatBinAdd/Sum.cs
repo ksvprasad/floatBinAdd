@@ -1,8 +1,8 @@
 using System;
 using System.Numerics;
-using distinguish;
-using equateSize;
-namespace binSum
+using Distinguish;
+using EquateSize;
+namespace BinSum
     {
         class Sum
             {

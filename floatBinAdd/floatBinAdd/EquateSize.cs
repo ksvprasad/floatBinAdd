@@ -1,6 +1,6 @@
 using System;
 using System.Numerics;
-namespace equateSize
+namespace EquateSize
     {
         class SameSize
             {

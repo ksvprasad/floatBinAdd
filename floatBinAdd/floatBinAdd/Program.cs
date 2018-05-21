@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Numerics;//for Big Integer Support.
 using convert;
-using distinguish;
-using printer;
-namespace floatBinAdd
+using Distinguish;
+using Printer;
+namespace FloatBinAdd
 {
     class Program
     {
@@ -11,7 +11,7 @@ namespace floatBinAdd
         {
             Print pt = new Print();
             Conversion cd = new Conversion();
-            Distinguish dis = new Distinguish();
+            Distinguisher dis = new Distinguisher();
             Console.WriteLine("Enter numbers");
             // User inputs for decimal numbers...
             double num1 = double.Parse(Console.ReadLine());
